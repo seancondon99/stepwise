@@ -177,5 +177,34 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Classical ML Models",
+    "children": [
+      {
+        "title": "Linear Regression",
+        "path": "classical-ml/01-linear-regression"
+      },
+      {
+        "title": "Regularized Regression",
+        "path": "classical-ml/02-regularized-regression"
+      },
+      {
+        "title": "Logistic Regression & Cross-Entropy",
+        "path": "classical-ml/03-logistic-regression"
+      },
+      {
+        "title": "Support Vector Machines",
+        "path": "classical-ml/04-svm"
+      },
+      {
+        "title": "Decision Trees",
+        "path": "classical-ml/05-decision-trees"
+      },
+      {
+        "title": "Bagging & Boosting",
+        "path": "classical-ml/06-bagging-boosting"
+      }
+    ]
   }
 ]
