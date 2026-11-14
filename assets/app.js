@@ -65,6 +65,63 @@
     ],
   });
 
+  // ---------- Derivation blocks ----------
+  // A ```derivation fenced block renders an aligned equation chain, one step per line:
+  //   LHS & RHS || tag || note
+  // `&` marks the alignment point; tag and note are optional. A note is short text shown to the
+  // right, or `[!ASSUMPTION] short title :: longer body` to render a chip that expands on click.
+
+  let derivId = 0;
+
+  function renderDerivation(src) {
+    const rows = [];
+    for (const line of src.split("\n")) {
+      if (!line.trim()) continue;
+      const [eq, tag = "", ...rest] = line.split(/\s*\|\|\s*/);
+      const note = rest.join(" || ").trim();
+      const amp = eq.search(/(?<!\\)&/);
+      const lhs = amp < 0 ? "" : eq.slice(0, amp);
+      const rhs = amp < 0 ? eq : eq.slice(amp + 1);
+
+      let noteHtml = "";
+      let more = "";
+      const m = /^\[!(\w+)\]\s*/.exec(note);
+      if (m && CALLOUTS[m[1].toLowerCase()]) {
+        const kind = m[1].toLowerCase();
+        const [title, body = ""] = note.slice(m[0].length).split(" :: ");
+        const id = "deriv-more-" + ++derivId;
+        noteHtml =
+          `<button type="button" class="d-chip callout-${kind}" aria-expanded="false" aria-controls="${id}">` +
+          `<span class="d-chip-kind">${CALLOUTS[kind]}</span>` +
+          (title.trim() ? `<span class="d-chip-title">${marked.parseInline(title.trim())}</span>` : "") +
+          `<span class="d-chip-caret" aria-hidden="true">▸</span></button>`;
+        more = `<div class="d-more callout-${kind}" id="${id}" hidden>${marked.parseInline(body.trim())}</div>`;
+      } else if (note) {
+        noteHtml = marked.parseInline(note);
+      }
+
+      rows.push(
+        `<div class="d-lhs">${lhs.trim() ? renderMath("\\displaystyle " + lhs, false) : ""}</div>` +
+          `<div class="d-rhs">${renderMath("\\displaystyle {}" + rhs, false)}</div>` +
+          `<div class="d-note">${noteHtml}</div>` +
+          `<div class="d-tag">${tag.trim() ? "(" + tag.trim() + ")" : ""}</div>` +
+          more
+      );
+    }
+    return `<div class="deriv">${rows.join("")}</div>`;
+  }
+
+  marked.use({
+    renderer: {
+      code(code, lang) {
+        // marked v12 passes (text, lang); newer versions pass a token object
+        if (code && typeof code === "object") ({ text: code, lang } = code);
+        if ((lang || "").trim() !== "derivation") return false;
+        return renderDerivation(code);
+      },
+    },
+  });
+
   // ---------- Navigation ----------
 
   function buildNav(nodes) {
@@ -208,6 +265,15 @@
     const open = document.body.classList.toggle("nav-open");
     toggle.setAttribute("aria-expanded", String(open));
   });
+  noteEl.addEventListener("click", (e) => {
+    const chip = e.target.closest(".d-chip");
+    if (!chip) return;
+    const more = document.getElementById(chip.getAttribute("aria-controls"));
+    const open = chip.getAttribute("aria-expanded") !== "true";
+    chip.setAttribute("aria-expanded", String(open));
+    if (more) more.hidden = !open;
+  });
+
   navEl.addEventListener("click", (e) => {
     if (e.target.closest("a")) {
       document.body.classList.remove("nav-open");

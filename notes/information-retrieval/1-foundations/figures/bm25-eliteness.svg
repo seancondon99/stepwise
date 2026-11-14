@@ -48,7 +48,7 @@
 <rect class="node" x="590" y="76" width="80" height="48" rx="6"/>
 <text x="630.0" y="105.0" text-anchor="middle" class="title">tfᵢ</text>
 <text x="90.0" y="152.0" text-anchor="middle" class="muted small">relevance (binary)</text>
-<text x="360.0" y="152.0" text-anchor="middle" class="muted small">eliteness (binary, hidden)</text>
+<text x="360.0" y="152.0" text-anchor="middle" class="muted small">eliteness (hidden)</text>
 <text x="630.0" y="152.0" text-anchor="middle" class="muted small">term frequency (observed)</text>
 <line class="arrow" x1="122" y1="100" x2="316" y2="100" marker-end="url(#ah)"/>
 <text x="219.0" y="90.0" text-anchor="middle" class="small">p₁ = P(Eᵢ = 1 | rel)</text>
