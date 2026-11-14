@@ -73,13 +73,22 @@
 
   let derivId = 0;
 
+  // First `&` not written as `\&` (avoids regex lookbehind, which older Safari lacks).
+  function indexOfUnescapedAmp(s) {
+    for (let i = 0; i < s.length; i++) {
+      if (s[i] === "\\") i++;
+      else if (s[i] === "&") return i;
+    }
+    return -1;
+  }
+
   function renderDerivation(src) {
     const rows = [];
     for (const line of src.split("\n")) {
       if (!line.trim()) continue;
       const [eq, tag = "", ...rest] = line.split(/\s*\|\|\s*/);
       const note = rest.join(" || ").trim();
-      const amp = eq.search(/(?<!\\)&/);
+      const amp = indexOfUnescapedAmp(eq);
       const lhs = amp < 0 ? "" : eq.slice(0, amp);
       const rhs = amp < 0 ? eq : eq.slice(amp + 1);
 
