@@ -1,0 +1,181 @@
+[
+  {
+    "title": "Information Retrieval",
+    "children": [
+      {
+        "title": "I. Foundations: Ranking, Clicks & Evaluation",
+        "children": [
+          {
+            "num": 1,
+            "title": "BM25 & the Probabilistic Relevance Framework",
+            "path": "information-retrieval/1-foundations/01-bm25"
+          },
+          {
+            "num": 2,
+            "title": "RankNet → LambdaRank → LambdaMART",
+            "path": "information-retrieval/1-foundations/02-lambdamart"
+          },
+          {
+            "num": 3,
+            "title": "Clickthrough Data as Implicit Feedback",
+            "path": "information-retrieval/1-foundations/03-clickthrough"
+          },
+          {
+            "num": 4,
+            "title": "Unbiased Learning-to-Rank",
+            "path": "information-retrieval/1-foundations/04-unbiased-ltr"
+          },
+          {
+            "num": 5,
+            "title": "Interleaved Search Evaluation",
+            "path": "information-retrieval/1-foundations/05-interleaving"
+          }
+        ]
+      },
+      {
+        "title": "II. Neural Ranking & Representation Learning",
+        "children": [
+          {
+            "num": 6,
+            "title": "DSSM",
+            "path": "information-retrieval/2-neural-ranking/06-dssm"
+          },
+          {
+            "num": 7,
+            "title": "Passage Re-ranking with BERT",
+            "path": "information-retrieval/2-neural-ranking/07-bert-reranking"
+          },
+          {
+            "num": 8,
+            "title": "Dense Passage Retrieval (DPR)",
+            "path": "information-retrieval/2-neural-ranking/08-dpr"
+          },
+          {
+            "num": 9,
+            "title": "ColBERT & ColBERTv2",
+            "path": "information-retrieval/2-neural-ranking/09-colbert"
+          },
+          {
+            "num": 10,
+            "title": "SPLADE",
+            "path": "information-retrieval/2-neural-ranking/10-splade"
+          },
+          {
+            "num": 11,
+            "title": "Contriever & E5",
+            "path": "information-retrieval/2-neural-ranking/11-contriever-e5"
+          },
+          {
+            "num": 12,
+            "title": "BEIR",
+            "path": "information-retrieval/2-neural-ranking/12-beir"
+          },
+          {
+            "num": 13,
+            "title": "ANN Infrastructure: HNSW & FAISS",
+            "path": "information-retrieval/2-neural-ranking/13-ann"
+          }
+        ]
+      },
+      {
+        "title": "III. Landmark Industrial Systems",
+        "children": [
+          {
+            "num": 14,
+            "title": "System Design for RecSys & Search",
+            "path": "information-retrieval/3-industrial-systems/14-system-design-recsys-search"
+          },
+          {
+            "num": 15,
+            "title": "Deep Neural Networks for YouTube Recs",
+            "path": "information-retrieval/3-industrial-systems/15-youtube-dnn"
+          },
+          {
+            "num": 16,
+            "title": "Sampling-Bias-Corrected Retrieval (logQ)",
+            "path": "information-retrieval/3-industrial-systems/16-sampling-bias-correction"
+          },
+          {
+            "num": 17,
+            "title": "YouTube Multitask Ranking (MMoE)",
+            "path": "information-retrieval/3-industrial-systems/17-youtube-multitask"
+          },
+          {
+            "num": 18,
+            "title": "Embedding-based Retrieval at Facebook",
+            "path": "information-retrieval/3-industrial-systems/18-facebook-ebr"
+          },
+          {
+            "num": 19,
+            "title": "Deep Learning for Airbnb Search",
+            "path": "information-retrieval/3-industrial-systems/19-airbnb-search"
+          },
+          {
+            "num": 20,
+            "title": "Generative Retrieval: DSI → TIGER",
+            "path": "information-retrieval/3-industrial-systems/20-generative-retrieval"
+          }
+        ]
+      },
+      {
+        "title": "IV. LLMs as Labelers, Judges & Rankers",
+        "children": [
+          {
+            "title": "Section overview",
+            "path": "information-retrieval/4-llms-as-judges/00-overview"
+          },
+          {
+            "num": 21,
+            "title": "LLMs Predict Searcher Preferences",
+            "path": "information-retrieval/4-llms-as-judges/21-llm-searcher-preferences"
+          },
+          {
+            "num": 22,
+            "title": "The LLM Relevance Judgment Debate",
+            "path": "information-retrieval/4-llms-as-judges/22-llm-judgment-debate"
+          },
+          {
+            "num": 23,
+            "title": "Synthetic Training Data: InPars, Promptagator, Gecko",
+            "path": "information-retrieval/4-llms-as-judges/23-synthetic-training-data"
+          },
+          {
+            "num": 24,
+            "title": "RankGPT: LLM Listwise Reranking",
+            "path": "information-retrieval/4-llms-as-judges/24-rankgpt"
+          }
+        ]
+      },
+      {
+        "title": "V. RAG & Agentic Retrieval",
+        "children": [
+          {
+            "num": 25,
+            "title": "REALM & RAG",
+            "path": "information-retrieval/5-rag-and-agents/25-realm-rag"
+          },
+          {
+            "num": 26,
+            "title": "Lost in the Middle",
+            "path": "information-retrieval/5-rag-and-agents/26-lost-in-the-middle"
+          },
+          {
+            "num": 27,
+            "title": "Contextual Retrieval",
+            "path": "information-retrieval/5-rag-and-agents/27-contextual-retrieval"
+          },
+          {
+            "num": 28,
+            "title": "WebGPT & ReAct",
+            "path": "information-retrieval/5-rag-and-agents/28-webgpt-react"
+          },
+          {
+            "num": 29,
+            "title": "Search-R1 & BrowseComp",
+            "path": "information-retrieval/5-rag-and-agents/29-search-r1-browsecomp"
+          }
+        ]
+      }
+    ]
+  }
+]
