@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 200" width="740" height="200" role="img" aria-label="Graphical model: relevance determines eliteness, eliteness determines term frequency">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #1f2328; }
+  .muted { fill: #6b7280; }
+  .small { font-size: 12px; }
+  .title { font-weight: 600; }
+  .axis { stroke: #9ca3af; stroke-width: 1; fill: none; }
+  .grid { stroke: #ececea; stroke-width: 1; fill: none; }
+  .s1 { stroke: #2f6fdb; } .f1 { fill: #2f6fdb; }
+  .s2 { stroke: #d9822b; } .f2 { fill: #d9822b; }
+  .s3 { stroke: #2e9e6a; } .f3 { fill: #2e9e6a; }
+  .s4 { stroke: #b0398f; } .f4 { fill: #b0398f; }
+  .line { fill: none; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; }
+  .dash { stroke-dasharray: 6 5; }
+  .ref { stroke: #6b7280; stroke-width: 1.25; stroke-dasharray: 4 4; fill: none; }
+  .shade { fill: #d0453a; opacity: 0.08; }
+  .node { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+  .hidden { fill: #e9effb; }
+  .arrow { stroke: #1f2328; stroke-width: 1.5; fill: none; }
+  .ahead { fill: #1f2328; }
+  .plate { fill: none; stroke: #9ca3af; stroke-width: 1.25; stroke-dasharray: 6 4; }
+  .legend-bg { fill: #fdfdfc; opacity: 0.9; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #e6e6e3; }
+    .muted { fill: #9aa0a8; }
+    .axis { stroke: #6b7280; }
+    .grid { stroke: #2a2e34; }
+    .s1 { stroke: #7aa7ff; } .f1 { fill: #7aa7ff; }
+    .s2 { stroke: #f0a35e; } .f2 { fill: #f0a35e; }
+    .s3 { stroke: #5cc495; } .f3 { fill: #5cc495; }
+    .s4 { stroke: #e07cc4; } .f4 { fill: #e07cc4; }
+    .ref { stroke: #9aa0a8; }
+    .shade { fill: #ff6b5e; opacity: 0.1; }
+    .node { fill: #1d2025; stroke: #e6e6e3; }
+    .hidden { fill: #263450; }
+    .arrow { stroke: #e6e6e3; }
+    .ahead { fill: #e6e6e3; }
+    .legend-bg { fill: #16181c; }
+  }
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ahead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="plate" x="298" y="28" width="430" height="150" rx="10"/>
+<text x="716.0" y="48.0" text-anchor="end" class="muted small">for each query term i ∈ q</text>
+<circle class="node" cx="90" cy="100" r="30"/>
+<text x="90.0" y="105.0" text-anchor="middle" class="title">Rel</text>
+<rect class="node hidden" x="320" y="76" width="80" height="48" rx="6"/>
+<text x="360.0" y="105.0" text-anchor="middle" class="title">Eᵢ</text>
+<rect class="node" x="590" y="76" width="80" height="48" rx="6"/>
+<text x="630.0" y="105.0" text-anchor="middle" class="title">tfᵢ</text>
+<text x="90.0" y="152.0" text-anchor="middle" class="muted small">relevance (binary)</text>
+<text x="360.0" y="152.0" text-anchor="middle" class="muted small">eliteness (binary, hidden)</text>
+<text x="630.0" y="152.0" text-anchor="middle" class="muted small">term frequency (observed)</text>
+<line class="arrow" x1="122" y1="100" x2="316" y2="100" marker-end="url(#ah)"/>
+<text x="219.0" y="90.0" text-anchor="middle" class="small">p₁ = P(Eᵢ = 1 | rel)</text>
+<text x="219.0" y="120.0" text-anchor="middle" class="small">p₀ = P(Eᵢ = 1 | non-rel)</text>
+<line class="arrow" x1="402" y1="100" x2="586" y2="100" marker-end="url(#ah)"/>
+<text x="494.0" y="90.0" text-anchor="middle" class="small">Poisson(λ₁) if elite</text>
+<text x="494.0" y="120.0" text-anchor="middle" class="small">Poisson(λ₀) if not</text>
+</svg>

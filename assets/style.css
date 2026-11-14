@@ -162,6 +162,38 @@ a:hover { text-decoration: underline; }
 
 .note img { max-width: 100%; height: auto; border-radius: 6px; }
 
+.note figure { margin: 1.8em 0; text-align: center; }
+.note figure img { display: block; margin: 0 auto; }
+.note figcaption {
+  margin-top: 0.6em;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* Callouts — colors echo the handwritten notes: pink assumptions, red problems, green intuition. */
+.note blockquote.callout { border-left-color: var(--callout); background: var(--callout-bg); }
+.note .callout-title {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--callout);
+  margin-bottom: 0.2em;
+}
+.callout-assumption { --callout: #c02a8c; --callout-bg: #fbf0f7; }
+.callout-problem    { --callout: #c8372d; --callout-bg: #fcf0ef; }
+.callout-intuition  { --callout: #23845a; --callout-bg: #eef7f2; }
+.callout-note       { --callout: var(--accent); --callout-bg: var(--quote-bg); }
+@media (prefers-color-scheme: dark) {
+  .callout-assumption { --callout: #ec7cc6; --callout-bg: #2c1f29; }
+  .callout-problem    { --callout: #ff7f74; --callout-bg: #2e1f1e; }
+  .callout-intuition  { --callout: #5cc495; --callout-bg: #1b2a23; }
+}
+
 .note table { border-collapse: collapse; width: 100%; font-size: 0.9em; margin: 1.2em 0; display: block; overflow-x: auto; }
 .note th, .note td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; }
 .note th { background: var(--sidebar-bg); font-family: var(--font-ui); }

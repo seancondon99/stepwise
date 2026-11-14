@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-label="2-Poisson term weights for several parameter settings all start at zero and saturate; tf/(k+tf) has the same shape">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #1f2328; }
+  .muted { fill: #6b7280; }
+  .small { font-size: 12px; }
+  .title { font-weight: 600; }
+  .axis { stroke: #9ca3af; stroke-width: 1; fill: none; }
+  .grid { stroke: #ececea; stroke-width: 1; fill: none; }
+  .s1 { stroke: #2f6fdb; } .f1 { fill: #2f6fdb; }
+  .s2 { stroke: #d9822b; } .f2 { fill: #d9822b; }
+  .s3 { stroke: #2e9e6a; } .f3 { fill: #2e9e6a; }
+  .s4 { stroke: #b0398f; } .f4 { fill: #b0398f; }
+  .line { fill: none; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; }
+  .dash { stroke-dasharray: 6 5; }
+  .ref { stroke: #6b7280; stroke-width: 1.25; stroke-dasharray: 4 4; fill: none; }
+  .shade { fill: #d0453a; opacity: 0.08; }
+  .node { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+  .hidden { fill: #e9effb; }
+  .arrow { stroke: #1f2328; stroke-width: 1.5; fill: none; }
+  .ahead { fill: #1f2328; }
+  .plate { fill: none; stroke: #9ca3af; stroke-width: 1.25; stroke-dasharray: 6 4; }
+  .legend-bg { fill: #fdfdfc; opacity: 0.9; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #e6e6e3; }
+    .muted { fill: #9aa0a8; }
+    .axis { stroke: #6b7280; }
+    .grid { stroke: #2a2e34; }
+    .s1 { stroke: #7aa7ff; } .f1 { fill: #7aa7ff; }
+    .s2 { stroke: #f0a35e; } .f2 { fill: #f0a35e; }
+    .s3 { stroke: #5cc495; } .f3 { fill: #5cc495; }
+    .s4 { stroke: #e07cc4; } .f4 { fill: #e07cc4; }
+    .ref { stroke: #9aa0a8; }
+    .shade { fill: #ff6b5e; opacity: 0.1; }
+    .node { fill: #1d2025; stroke: #e6e6e3; }
+    .hidden { fill: #263450; }
+    .arrow { stroke: #e6e6e3; }
+    .ahead { fill: #e6e6e3; }
+    .legend-bg { fill: #16181c; }
+  }
+</style>
+<line class="grid" x1="80" x2="680" y1="240.0" y2="240.0"/>
+<text x="72.0" y="244.0" text-anchor="end" class="muted small">0</text>
+<line class="grid" x1="80" x2="680" y1="187.6" y2="187.6"/>
+<text x="72.0" y="191.6" text-anchor="end" class="muted small">0.25</text>
+<line class="grid" x1="80" x2="680" y1="135.2" y2="135.2"/>
+<text x="72.0" y="139.2" text-anchor="end" class="muted small">0.5</text>
+<line class="grid" x1="80" x2="680" y1="82.9" y2="82.9"/>
+<text x="72.0" y="86.9" text-anchor="end" class="muted small">0.75</text>
+<line class="grid" x1="80" x2="680" y1="30.5" y2="30.5"/>
+<text x="72.0" y="34.5" text-anchor="end" class="muted small">1</text>
+<text x="80.0" y="258.0" text-anchor="middle" class="muted small">0</text>
+<text x="200.0" y="258.0" text-anchor="middle" class="muted small">3</text>
+<text x="320.0" y="258.0" text-anchor="middle" class="muted small">6</text>
+<text x="440.0" y="258.0" text-anchor="middle" class="muted small">9</text>
+<text x="560.0" y="258.0" text-anchor="middle" class="muted small">12</text>
+<text x="680.0" y="258.0" text-anchor="middle" class="muted small">15</text>
+<line class="axis" x1="80" x2="680" y1="240" y2="240"/>
+<line class="axis" x1="80" x2="80" y1="20" y2="240"/>
+<text x="380.0" y="280.0" text-anchor="middle" class="muted">term frequency tf</text>
+<text x="36.0" y="130.0" text-anchor="middle" class="muted" transform="rotate(-90 36.0 130.0)">wᵢ(tf) / asymptote</text>
+<line class="ref" x1="80" x2="680" y1="30.5" y2="30.5"/>
+<polyline class="line s1" points="80.0,240.0 120.0,102.8 160.0,33.6 200.0,30.6 240.0,30.5 280.0,30.5 320.0,30.5 360.0,30.5 400.0,30.5 440.0,30.5 480.0,30.5 520.0,30.5 560.0,30.5 600.0,30.5 640.0,30.5 680.0,30.5"/>
+<circle class="f1" cx="80.0" cy="240.0" r="3"/>
+<circle class="f1" cx="120.0" cy="102.8" r="3"/>
+<circle class="f1" cx="160.0" cy="33.6" r="3"/>
+<circle class="f1" cx="200.0" cy="30.6" r="3"/>
+<circle class="f1" cx="240.0" cy="30.5" r="3"/>
+<circle class="f1" cx="280.0" cy="30.5" r="3"/>
+<circle class="f1" cx="320.0" cy="30.5" r="3"/>
+<circle class="f1" cx="360.0" cy="30.5" r="3"/>
+<circle class="f1" cx="400.0" cy="30.5" r="3"/>
+<circle class="f1" cx="440.0" cy="30.5" r="3"/>
+<circle class="f1" cx="480.0" cy="30.5" r="3"/>
+<circle class="f1" cx="520.0" cy="30.5" r="3"/>
+<circle class="f1" cx="560.0" cy="30.5" r="3"/>
+<circle class="f1" cx="600.0" cy="30.5" r="3"/>
+<circle class="f1" cx="640.0" cy="30.5" r="3"/>
+<circle class="f1" cx="680.0" cy="30.5" r="3"/>
+<polyline class="line s3" points="80.0,240.0 120.0,200.3 160.0,163.5 200.0,131.3 240.0,104.7 280.0,83.8 320.0,68.0 360.0,56.5 400.0,48.3 440.0,42.6 480.0,38.6 520.0,36.0 560.0,34.2 600.0,32.9 640.0,32.1 680.0,31.6"/>
+<circle class="f3" cx="80.0" cy="240.0" r="3"/>
+<circle class="f3" cx="120.0" cy="200.3" r="3"/>
+<circle class="f3" cx="160.0" cy="163.5" r="3"/>
+<circle class="f3" cx="200.0" cy="131.3" r="3"/>
+<circle class="f3" cx="240.0" cy="104.7" r="3"/>
+<circle class="f3" cx="280.0" cy="83.8" r="3"/>
+<circle class="f3" cx="320.0" cy="68.0" r="3"/>
+<circle class="f3" cx="360.0" cy="56.5" r="3"/>
+<circle class="f3" cx="400.0" cy="48.3" r="3"/>
+<circle class="f3" cx="440.0" cy="42.6" r="3"/>
+<circle class="f3" cx="480.0" cy="38.6" r="3"/>
+<circle class="f3" cx="520.0" cy="36.0" r="3"/>
+<circle class="f3" cx="560.0" cy="34.2" r="3"/>
+<circle class="f3" cx="600.0" cy="32.9" r="3"/>
+<circle class="f3" cx="640.0" cy="32.1" r="3"/>
+<circle class="f3" cx="680.0" cy="31.6" r="3"/>
+<polyline class="line s4" points="80.0,240.0 120.0,236.6 160.0,230.2 200.0,218.9 240.0,200.6 280.0,174.4 320.0,142.4 360.0,109.4 400.0,81.0 440.0,60.1 480.0,46.8 520.0,39.1 560.0,34.9 600.0,32.7 640.0,31.6 680.0,31.0"/>
+<circle class="f4" cx="80.0" cy="240.0" r="3"/>
+<circle class="f4" cx="120.0" cy="236.6" r="3"/>
+<circle class="f4" cx="160.0" cy="230.2" r="3"/>
+<circle class="f4" cx="200.0" cy="218.9" r="3"/>
+<circle class="f4" cx="240.0" cy="200.6" r="3"/>
+<circle class="f4" cx="280.0" cy="174.4" r="3"/>
+<circle class="f4" cx="320.0" cy="142.4" r="3"/>
+<circle class="f4" cx="360.0" cy="109.4" r="3"/>
+<circle class="f4" cx="400.0" cy="81.0" r="3"/>
+<circle class="f4" cx="440.0" cy="60.1" r="3"/>
+<circle class="f4" cx="480.0" cy="46.8" r="3"/>
+<circle class="f4" cx="520.0" cy="39.1" r="3"/>
+<circle class="f4" cx="560.0" cy="34.9" r="3"/>
+<circle class="f4" cx="600.0" cy="32.7" r="3"/>
+<circle class="f4" cx="640.0" cy="31.6" r="3"/>
+<circle class="f4" cx="680.0" cy="31.0" r="3"/>
+<polyline class="line s2 dash" points="80.0,240.0 83.0,231.4 86.0,223.5 89.0,216.1 92.0,209.3 95.0,203.0 98.0,197.1 101.0,191.6 104.0,186.5 107.0,181.7 110.0,177.1 113.0,172.9 116.0,168.8 119.0,165.0 122.0,161.4 125.0,158.0 128.0,154.8 131.0,151.7 134.0,148.8 137.0,146.0 140.0,143.3 143.0,140.8 146.0,138.3 149.0,136.0 152.0,133.8 155.0,131.6 158.0,129.6 161.0,127.6 164.0,125.7 167.0,123.9 170.0,122.1 173.0,120.5 176.0,118.8 179.0,117.3 182.0,115.7 185.0,114.3 188.0,112.9 191.0,111.5 194.0,110.2 197.0,108.9 200.0,107.7 203.0,106.5 206.0,105.3 209.0,104.2 212.0,103.1 215.0,102.0 218.0,101.0 221.0,100.0 224.0,99.0 227.0,98.1 230.0,97.1 233.0,96.2 236.0,95.4 239.0,94.5 242.0,93.7 245.0,92.9 248.0,92.1 251.0,91.3 254.0,90.6 257.0,89.9 260.0,89.1 263.0,88.4 266.0,87.8 269.0,87.1 272.0,86.5 275.0,85.8 278.0,85.2 281.0,84.6 284.0,84.0 287.0,83.4 290.0,82.9 293.0,82.3 296.0,81.8 299.0,81.2 302.0,80.7 305.0,80.2 308.0,79.7 311.0,79.2 314.0,78.7 317.0,78.3 320.0,77.8 323.0,77.3 326.0,76.9 329.0,76.5 332.0,76.0 335.0,75.6 338.0,75.2 341.0,74.8 344.0,74.4 347.0,74.0 350.0,73.6 353.0,73.2 356.0,72.9 359.0,72.5 362.0,72.1 365.0,71.8 368.0,71.4 371.0,71.1 374.0,70.8 377.0,70.4 380.0,70.1 383.0,69.8 386.0,69.5 389.0,69.2 392.0,68.9 395.0,68.6 398.0,68.3 401.0,68.0 404.0,67.7 407.0,67.4 410.0,67.1 413.0,66.9 416.0,66.6 419.0,66.3 422.0,66.1 425.0,65.8 428.0,65.6 431.0,65.3 434.0,65.1 437.0,64.8 440.0,64.6 443.0,64.3 446.0,64.1 449.0,63.9 452.0,63.7 455.0,63.4 458.0,63.2 461.0,63.0 464.0,62.8 467.0,62.6 470.0,62.4 473.0,62.2 476.0,61.9 479.0,61.7 482.0,61.5 485.0,61.4 488.0,61.2 491.0,61.0 494.0,60.8 497.0,60.6 500.0,60.4 503.0,60.2 506.0,60.0 509.0,59.9 512.0,59.7 515.0,59.5 518.0,59.3 521.0,59.2 524.0,59.0 527.0,58.8 530.0,58.7 533.0,58.5 536.0,58.4 539.0,58.2 542.0,58.0 545.0,57.9 548.0,57.7 551.0,57.6 554.0,57.4 557.0,57.3 560.0,57.1 563.0,57.0 566.0,56.9 569.0,56.7 572.0,56.6 575.0,56.4 578.0,56.3 581.0,56.2 584.0,56.0 587.0,55.9 590.0,55.8 593.0,55.6 596.0,55.5 599.0,55.4 602.0,55.3 605.0,55.1 608.0,55.0 611.0,54.9 614.0,54.8 617.0,54.6 620.0,54.5 623.0,54.4 626.0,54.3 629.0,54.2 632.0,54.1 635.0,53.9 638.0,53.8 641.0,53.7 644.0,53.6 647.0,53.5 650.0,53.4 653.0,53.3 656.0,53.2 659.0,53.1 662.0,53.0 665.0,52.9 668.0,52.8 671.0,52.7 674.0,52.6 677.0,52.5 680.0,52.4"/>
+<rect class="legend-bg" x="352.0" y="121.23809523809524" width="330" height="84" rx="4"/>
+<line class="line s1" x1="360.0" x2="382.0" y1="131.23809523809524" y2="131.23809523809524"/>
+<text x="390.0" y="135.2" text-anchor="start" class="small">2-Poisson: p₁=0.6, p₀=0.1, λ₁=2, λ₀=0.05</text>
+<line class="line s3" x1="360.0" x2="382.0" y1="150.23809523809524" y2="150.23809523809524"/>
+<text x="390.0" y="154.2" text-anchor="start" class="small">2-Poisson: p₁=0.9, p₀=0.5, λ₁=3, λ₀=2</text>
+<line class="line s4" x1="360.0" x2="382.0" y1="169.23809523809524" y2="169.23809523809524"/>
+<text x="390.0" y="173.2" text-anchor="start" class="small">2-Poisson: p₁=0.7, p₀=0.2, λ₁=8, λ₀=4</text>
+<line class="line s2 dash" x1="360.0" x2="382.0" y1="188.23809523809524" y2="188.23809523809524"/>
+<text x="390.0" y="192.2" text-anchor="start" class="small">tf / (k + tf),  k ≈ 1.8</text>
+</svg>

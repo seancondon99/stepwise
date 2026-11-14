@@ -14,9 +14,15 @@
   // ---------- Markdown + math ----------
   // $$...$$ for display math, $...$ for inline. Tokenized inside marked so code spans/blocks are left alone.
 
+  // Shorthands usable in any note's math.
+  const MACROS = {
+    "\\rel": "\\mathrm{rel}",
+    "\\nrel": "\\overline{\\mathrm{rel}}",
+  };
+
   function renderMath(tex, displayMode) {
     try {
-      return katex.renderToString(tex, { displayMode, throwOnError: false });
+      return katex.renderToString(tex, { displayMode, throwOnError: false, macros: { ...MACROS } });
     } catch (e) {
       return `<code>${tex}</code>`;
     }
@@ -151,6 +157,26 @@
     }
   }
 
+  // Callouts: a blockquote starting with [!ASSUMPTION], [!PROBLEM], [!INTUITION] or [!NOTE]
+  // becomes a colored box with a title.
+  const CALLOUTS = { assumption: "Assumption", problem: "Problem", intuition: "Intuition", note: "Note" };
+
+  function renderCallouts() {
+    for (const bq of noteEl.querySelectorAll("blockquote")) {
+      const p = bq.querySelector("p");
+      const m = p && /^\s*\[!(\w+)\]\s*/.exec(p.innerHTML);
+      if (!m || !CALLOUTS[m[1].toLowerCase()]) continue;
+      const kind = m[1].toLowerCase();
+      p.innerHTML = p.innerHTML.slice(m[0].length);
+      if (!p.innerHTML.trim()) p.remove();
+      bq.classList.add("callout", "callout-" + kind);
+      const title = document.createElement("div");
+      title.className = "callout-title";
+      title.textContent = CALLOUTS[kind];
+      bq.prepend(title);
+    }
+  }
+
   async function loadNote(path) {
     try {
       const res = await fetch(NOTES_DIR + path + ".md", { cache: "no-cache" });
@@ -158,6 +184,7 @@
       const md = await res.text();
       noteEl.innerHTML = marked.parse(md);
       rebaseRelativeUrls(path);
+      renderCallouts();
       const h1 = noteEl.querySelector("h1");
       document.title = (h1 ? h1.textContent + " · " : "") + "Stepwise";
     } catch (err) {

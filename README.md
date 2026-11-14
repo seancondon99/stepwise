@@ -34,7 +34,14 @@ notes/<section>/<subsection>/<NN-slug>.md
 ## Writing notes
 
 - Standard Markdown, including tables and fenced code.
-- Math: `$inline$` and `$$display$$` (KaTeX).
+- Math: `$inline$` and `$$display$$` (KaTeX). Number an equation with `\tag{2.1}`. Shorthands: `\rel` → rel, `\nrel` → rel with an overbar (add more in `MACROS` in `assets/app.js`).
+- Callouts: start a blockquote with `[!ASSUMPTION]` (pink), `[!PROBLEM]` (red), `[!INTUITION]` (green) or `[!NOTE]` (blue):
+
+  ```md
+  > [!ASSUMPTION]
+  > Terms are conditionally independent given relevance.
+  ```
+- Figures: `<figure><img src="figures/x.svg" alt="..."><figcaption>...</figcaption></figure>`. SVGs can carry their own `prefers-color-scheme` styles for dark mode.
 - Images: put them next to the note (e.g. `figures/fig1.png`) and reference them relatively: `![](figures/fig1.png)`.
 - Link to another note with its relative `.md` path, e.g. `[BEIR](../2-neural-ranking/12-beir.md)`.
 
