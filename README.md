@@ -1,5 +1,7 @@
 # Stepwise
 
+**Live site: https://seancondon99.github.io/stepwise/**
+
 A static site of my paper notes. No build step: notes are Markdown files rendered in the browser.
 
 ## Run locally

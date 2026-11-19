@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="760" height="180" role="img" aria-label="Moving the top relevant doc down 3 and the bottom one up 5 removes two pairwise errors but lowers NDCG">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #1f2328; }
+  .muted { fill: #6b7280; }
+  .small { font-size: 12px; }
+  .title { font-weight: 600; }
+  .axis { stroke: #9ca3af; stroke-width: 1; fill: none; }
+  .grid { stroke: #ececea; stroke-width: 1; fill: none; }
+  .s1 { stroke: #2f6fdb; } .f1 { fill: #2f6fdb; }
+  .s2 { stroke: #d9822b; } .f2 { fill: #d9822b; }
+  .s3 { stroke: #2e9e6a; } .f3 { fill: #2e9e6a; }
+  .s4 { stroke: #b0398f; } .f4 { fill: #b0398f; }
+  .line { fill: none; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; }
+  .dash { stroke-dasharray: 6 5; }
+  .ref { stroke: #6b7280; stroke-width: 1.25; stroke-dasharray: 4 4; fill: none; }
+  .shade { fill: #d0453a; opacity: 0.08; }
+  .node { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+  .hidden { fill: #e9effb; }
+  .arrow { stroke: #1f2328; stroke-width: 1.5; fill: none; }
+  .ahead { fill: #1f2328; }
+  .plate { fill: none; stroke: #9ca3af; stroke-width: 1.25; stroke-dasharray: 6 4; }
+  .legend-bg { fill: #fdfdfc; opacity: 0.9; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #e6e6e3; }
+    .muted { fill: #9aa0a8; }
+    .axis { stroke: #6b7280; }
+    .grid { stroke: #2a2e34; }
+    .s1 { stroke: #7aa7ff; } .f1 { fill: #7aa7ff; }
+    .s2 { stroke: #f0a35e; } .f2 { fill: #f0a35e; }
+    .s3 { stroke: #5cc495; } .f3 { fill: #5cc495; }
+    .s4 { stroke: #e07cc4; } .f4 { fill: #e07cc4; }
+    .ref { stroke: #9aa0a8; }
+    .shade { fill: #ff6b5e; opacity: 0.1; }
+    .node { fill: #1d2025; stroke: #e6e6e3; }
+    .hidden { fill: #263450; }
+    .arrow { stroke: #e6e6e3; }
+    .ahead { fill: #e6e6e3; }
+    .legend-bg { fill: #16181c; }
+  }
+
+  .cell { fill: #ffffff; stroke: #9ca3af; stroke-width: 1.25; }
+  .cell-rel { fill: #2f6fdb; stroke: #2f6fdb; stroke-width: 1.25; }
+  .cell-rel-text { fill: #ffffff; font-weight: 600; }
+  .move { stroke: #6b7280; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+  @media (prefers-color-scheme: dark) {
+    .cell { fill: #1d2025; stroke: #6b7280; }
+    .cell-rel { fill: #7aa7ff; stroke: #7aa7ff; }
+    .cell-rel-text { fill: #16181c; }
+    .move { stroke: #9aa0a8; }
+  }
+</style>
+<text x="40.0" y="45.0" text-anchor="middle" class="title">A</text>
+<rect class="cell" x="86.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="100.0" y="44.5" text-anchor="middle" class="small muted">1</text>
+<rect class="cell-rel" x="126.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="140.0" y="44.5" text-anchor="middle" class="small cell-rel-text">2</text>
+<rect class="cell" x="166.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="180.0" y="44.5" text-anchor="middle" class="small muted">3</text>
+<rect class="cell" x="206.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="220.0" y="44.5" text-anchor="middle" class="small muted">4</text>
+<rect class="cell" x="246.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="260.0" y="44.5" text-anchor="middle" class="small muted">5</text>
+<rect class="cell" x="286.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="300.0" y="44.5" text-anchor="middle" class="small muted">6</text>
+<rect class="cell" x="326.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="340.0" y="44.5" text-anchor="middle" class="small muted">7</text>
+<rect class="cell" x="366.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="380.0" y="44.5" text-anchor="middle" class="small muted">8</text>
+<rect class="cell" x="406.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="420.0" y="44.5" text-anchor="middle" class="small muted">9</text>
+<rect class="cell" x="446.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="460.0" y="44.5" text-anchor="middle" class="small muted">10</text>
+<rect class="cell-rel" x="486.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="500.0" y="44.5" text-anchor="middle" class="small cell-rel-text">11</text>
+<rect class="cell" x="526.0" y="26.0" width="28" height="28" rx="5"/>
+<text x="540.0" y="44.5" text-anchor="middle" class="small muted">12</text>
+<text x="586.0" y="38.0" text-anchor="start" class="small">pairwise errors = 10</text>
+<text x="586.0" y="56.0" text-anchor="start" class="small">NDCG = 0.56</text>
+<text x="40.0" y="155.0" text-anchor="middle" class="title">B</text>
+<rect class="cell" x="86.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="100.0" y="154.5" text-anchor="middle" class="small muted">1</text>
+<rect class="cell" x="126.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="140.0" y="154.5" text-anchor="middle" class="small muted">2</text>
+<rect class="cell" x="166.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="180.0" y="154.5" text-anchor="middle" class="small muted">3</text>
+<rect class="cell" x="206.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="220.0" y="154.5" text-anchor="middle" class="small muted">4</text>
+<rect class="cell-rel" x="246.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="260.0" y="154.5" text-anchor="middle" class="small cell-rel-text">5</text>
+<rect class="cell-rel" x="286.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="300.0" y="154.5" text-anchor="middle" class="small cell-rel-text">6</text>
+<rect class="cell" x="326.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="340.0" y="154.5" text-anchor="middle" class="small muted">7</text>
+<rect class="cell" x="366.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="380.0" y="154.5" text-anchor="middle" class="small muted">8</text>
+<rect class="cell" x="406.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="420.0" y="154.5" text-anchor="middle" class="small muted">9</text>
+<rect class="cell" x="446.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="460.0" y="154.5" text-anchor="middle" class="small muted">10</text>
+<rect class="cell" x="486.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="500.0" y="154.5" text-anchor="middle" class="small muted">11</text>
+<rect class="cell" x="526.0" y="136.0" width="28" height="28" rx="5"/>
+<text x="540.0" y="154.5" text-anchor="middle" class="small muted">12</text>
+<text x="586.0" y="148.0" text-anchor="start" class="small">pairwise errors = 8</text>
+<text x="586.0" y="166.0" text-anchor="start" class="small">NDCG = 0.46</text>
+<defs><marker id="mv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ahead" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<line class="move" x1="140.0" y1="58" x2="260.0" y2="130" marker-end="url(#mv)"/>
+<text x="208.2" y="84.3" text-anchor="start" class="muted small">down 3</text>
+<line class="move" x1="500.0" y1="58" x2="300.0" y2="130" marker-end="url(#mv)"/>
+<text x="394.6" y="82.9" text-anchor="end" class="muted small">up 5</text>
+</svg>
