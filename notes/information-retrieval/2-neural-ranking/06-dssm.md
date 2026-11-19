@@ -18,7 +18,7 @@
 ## Results
 
 
-## Takeaways & interview angles
+## Takeaways
 
 
 ## Open questions

@@ -109,7 +109,7 @@ F_m(x) & = F_{m-1}(x) + \eta \sum_l \gamma_{lm}\, \mathbf{1}[x \in R_{lm}] || ||
 
 ---
 
-## Takeaways & interview angles
+## Takeaways
 
 - **The lambda trick:** specify the gradient, not the cost. Works for any metric $Z$ you can compute a swap delta for.
 - **RankNet = logistic loss on score gaps** $s_i - s_j$, trained on pairs.

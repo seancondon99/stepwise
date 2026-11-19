@@ -2,7 +2,7 @@
 
 **Chapelle, Joachims, Radlinski & Yue — Large-Scale Validation and Analysis of Interleaved Search Evaluation** · *TOIS 2012*
 
-> **Why read it:** Interleaving is much more sensitive than A/B testing for comparing rankers. Online evaluation comes up in almost every senior interview.
+> **Why read it:** Interleaving is much more sensitive than A/B testing for comparing rankers.
 
 **Companion reading:**
 
@@ -22,7 +22,7 @@
 ## Results
 
 
-## Takeaways & interview angles
+## Takeaways
 
 
 ## Open questions
