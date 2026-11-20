@@ -121,6 +121,44 @@ F_m(x) & = F_{m-1}(x) + \eta \sum_l \gamma_{lm}\, \mathbf{1}[x \in R_{lm}] || ||
 
 - The lambdas aren't the gradient of any fixed cost ($|\Delta Z|$ changes with the order). What is LambdaMART actually minimizing? (LambdaLoss, Wang et al. 2018.)
 
+
+## Good questions
+
+<details class="q">
+<summary>Why can't you run gradient descent on NDCG directly?</summary>
+
+NDCG sees the scores only through a sort. Small score changes don't change the order, so the gradient is 0 almost everywhere and undefined at ties.
+
+</details>
+
+<details class="q">
+<summary>How can fewer pairwise errors give a worse NDCG?</summary>
+
+Pairwise error counts every misordered pair equally, wherever it is in the list. NDCG's discount makes one mistake at the top cost more than several further down.
+
+</details>
+
+<details class="q">
+<summary>What is a lambda, intuitively?</summary>
+
+A force on each doc's score: which way it should move and how hard. It sums the pushes from every pair the doc is in, each weighted by how much the metric cares about that swap. You write down the gradient directly and never need the cost.
+
+</details>
+
+<details class="q">
+<summary>Is LambdaMART pointwise, pairwise or listwise?</summary>
+
+Pairwise in form: gradients are built from pairs. Listwise in effect: $|\Delta \mathrm{NDCG}_{ij}|$ depends on where both docs sit in the whole sorted list.
+
+</details>
+
+<details class="q">
+<summary>Why did boosted trees (LambdaMART) win over the neural net (LambdaRank) in practice?</summary>
+
+LTR features are heterogeneous and tabular (BM25, clicks, freshness, counts) on wildly different scales. Trees need no normalization, handle that natively, train fast and are cheap at serving time.
+
+</details>
+
 ---
 
 ## Appendix: MART for binary classification

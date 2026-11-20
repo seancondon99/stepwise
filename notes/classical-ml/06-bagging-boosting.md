@@ -32,3 +32,35 @@ r_{im} & = y_i - F_{m-1}(x_i) = -\frac{\partial}{\partial F} \tfrac{1}{2}\big(y_
 | reduces | variance | bias and variance (mainly bias) |
 | final score | average | weighted sum |
 | more trees | never hurts, just plateaus | can overfit: shrink with $\eta$, stop early |
+
+---
+
+## Good questions
+
+<details class="q">
+<summary>Why do random forests subsample features at each split?</summary>
+
+To decorrelate the trees. The variance of the average can't go below $\rho\sigma^2$, so lowering $\rho$ lowers the floor; more trees can't.
+
+</details>
+
+<details class="q">
+<summary>Why does boosting mainly reduce bias?</summary>
+
+Each shallow tree is a weak, high-bias model. Fitting each one to what the previous trees got wrong builds an expressive sum out of simple parts.
+
+</details>
+
+<details class="q">
+<summary>Why use a small learning rate η?</summary>
+
+Small steps with more trees generalize better: no single tree can overfit the current residuals. The cost is more trees and longer training.
+
+</details>
+
+<details class="q">
+<summary>Can boosting be parallelized?</summary>
+
+Not across trees: each one depends on the previous ones. Within a tree, yes: split finding over features and histogram bins runs in parallel, which is what XGBoost and LightGBM do.
+
+</details>

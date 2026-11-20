@@ -54,3 +54,35 @@ $$
 t_j & = \frac{\hat\beta_j}{\mathrm{SE}(\hat\beta_j)} \sim t_{n-p} || || [!ASSUMPTION] normal errors :: Exact only if errors are normal (5). With large $n$ the tests hold approximately (CLT).
 F & = \frac{(\mathrm{RSS}_{\text{reduced}} - \mathrm{RSS}_{\text{full}})\,/\,q}{\mathrm{RSS}_{\text{full}}\,/\,(n - p)} \sim F_{q,\, n-p} || || fit a full and a reduced model ($q$ fewer coefficients)
 ```
+
+---
+
+## Good questions
+
+<details class="q">
+<summary>In what sense is OLS the "best" estimator?</summary>
+
+With no assumptions, it's the best linear *predictor* (a projection). Under assumptions 1–4, Gauss–Markov makes it the lowest-variance *linear* unbiased estimator. Add normal errors and it's the MLE and the best of *all* unbiased estimators.
+
+</details>
+
+<details class="q">
+<summary>Does heteroskedasticity bias the coefficients?</summary>
+
+No: $\hat\theta$ stays unbiased. The classical standard errors are wrong, so the t-tests are too. Use robust (sandwich) standard errors or weighted least squares.
+
+</details>
+
+<details class="q">
+<summary>What happens with perfectly or nearly collinear features?</summary>
+
+Perfect: $X^\top X$ is singular and there's no unique solution. Nearly: the solution exists but its variance explodes, and coefficients flip sign between samples. Ridge fixes both.
+
+</details>
+
+<details class="q">
+<summary>Why squared error rather than absolute error?</summary>
+
+Squared error = Gaussian MLE, has a closed form and estimates the conditional *mean*. Absolute error = Laplace MLE, estimates the conditional *median* and is more robust to outliers.
+
+</details>

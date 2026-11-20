@@ -30,3 +30,35 @@ H(p, q) & = -\sum_x p(x) \log q(x) || || cross-entropy
 H(p) & = -\sum_x p(x) \log p(x) || || entropy
 \arg\min_q H(p, q) & = \arg\min_q D_{\mathrm{KL}}(p \,\Vert\, q) || || [!INTUITION] why cross-entropy :: $H(p)$ doesn't depend on the model, so minimizing cross-entropy = minimizing KL to the data. BCE is the cross-entropy between the label $p = (y,\, 1 - y)$ and the prediction $q = (\hat y,\, 1 - \hat y)$.
 ```
+
+---
+
+## Good questions
+
+<details class="q">
+<summary>Why not train logistic regression with squared error?</summary>
+
+Through the sigmoid, squared error isn't convex in $\theta$. Its gradient also gets multiplied by $\sigma'(z)$, which vanishes exactly when the model is confidently wrong. The cross-entropy gradient $(\hat y - y)\,x$ doesn't have that problem.
+
+</details>
+
+<details class="q">
+<summary>What happens on linearly separable data?</summary>
+
+The MLE doesn't exist: scaling $\theta$ up always pushes the probabilities closer to 0 and 1, so $\lVert\theta\rVert \to \infty$. Regularization (or early stopping) is needed.
+
+</details>
+
+<details class="q">
+<summary>Why is cross-entropy the "right" loss?</summary>
+
+It's the negative log-likelihood of a Bernoulli model. Equivalently, minimizing it minimizes the KL divergence from the data's distribution to the model's.
+
+</details>
+
+<details class="q">
+<summary>Are logistic regression probabilities calibrated?</summary>
+
+With an intercept, at the MLE the average predicted probability equals the positive rate. They're well calibrated when the model is well specified. Heavy regularization or a misspecified model breaks this.
+
+</details>

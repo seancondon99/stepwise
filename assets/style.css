@@ -332,3 +332,12 @@ a:hover { text-decoration: underline; }
 
 /* keep inline math in table cells on one line */
 .note td .katex { white-space: nowrap; }
+
+/* "Good questions": question visible, answer behind a click */
+.note details.q { border: 1px solid var(--border); border-radius: 8px; margin: 0.5em 0; padding: 0 0.9em; }
+.note details.q > summary { cursor: pointer; padding: 0.6em 0; font-weight: 600; list-style: none; }
+.note details.q > summary::-webkit-details-marker { display: none; }
+.note details.q > summary::before { content: "▸"; color: var(--accent); display: inline-block; width: 1.1em; transition: transform 0.12s; }
+.note details.q[open] > summary::before { transform: rotate(90deg); }
+.note details.q[open] > summary { border-bottom: 1px solid var(--border); }
+.note details.q > p { margin: 0.6em 0 0.7em 1.1em; }

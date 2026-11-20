@@ -13,3 +13,35 @@ I_{\text{MSE}} & = \frac{1}{n} \sum_{i=1}^{n} (y_i - \bar y)^2 || || regression;
   <img src="figures/tree-impurity.svg" alt="Gini, half entropy and misclassification error against class share">
   <figcaption>Two-class node. All three are 0 for a pure node and peak at p = 0.5. Gini and entropy are strictly concave, so they reward splits that make children purer even when the majority class doesn't change; misclassification error often doesn't.</figcaption>
 </figure>
+
+---
+
+## Good questions
+
+<details class="q">
+<summary>Why are trees grown greedily?</summary>
+
+Finding the optimal tree is NP-hard. Greedy picks the locally best split at each node and never looks back.
+
+</details>
+
+<details class="q">
+<summary>Why split on Gini or entropy instead of misclassification rate?</summary>
+
+A split can make both children purer without changing either majority class: misclassification error doesn't change, so the split looks useless. Gini and entropy are strictly concave, so they reward it.
+
+</details>
+
+<details class="q">
+<summary>Why does a single deep tree overfit?</summary>
+
+High variance: a small change in the data changes an early split, and everything below it. Deep trees memorize. Fixes: pruning, depth limits, ensembles.
+
+</details>
+
+<details class="q">
+<summary>Why don't trees need feature scaling?</summary>
+
+Each split is a threshold on one feature, so any monotone transform of a feature gives the same tree.
+
+</details>
