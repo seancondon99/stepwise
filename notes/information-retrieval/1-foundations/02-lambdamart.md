@@ -148,7 +148,7 @@ A force on each doc's score: which way it should move and how hard. It sums the 
 <details class="q">
 <summary>Is LambdaMART pointwise, pairwise or listwise?</summary>
 
-Pairwise in form: gradients are built from pairs. Listwise in effect: $|\Delta \mathrm{NDCG}_{ij}|$ depends on where both docs sit in the whole sorted list.
+These labels describe the **training loss**, not inference. At inference every LTR model scores each doc on its own, $s_i = f(x_i)$, and sorts. The loss is pairwise in form (built from pairs) and listwise in effect: $|\Delta \mathrm{NDCG}_{ij}|$ depends on where both docs sit in the whole sorted list. A single score means nothing by itself; only differences $s_i - s_j$ do.
 
 </details>
 
