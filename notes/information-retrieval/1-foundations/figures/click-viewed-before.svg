@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 434" width="760" height="434" role="img" aria-label="Heatmap of how often each abstract was viewed before a click at each rank: high above the diagonal, about half just below it, low further below">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #1f2328; }
+  .muted { fill: #6b7280; }
+  .small { font-size: 12px; }
+  .title { font-weight: 600; }
+  .axis { stroke: #9ca3af; stroke-width: 1; fill: none; }
+  .grid { stroke: #ececea; stroke-width: 1; fill: none; }
+  .s1 { stroke: #2f6fdb; } .f1 { fill: #2f6fdb; }
+  .s2 { stroke: #d9822b; } .f2 { fill: #d9822b; }
+  .s3 { stroke: #2e9e6a; } .f3 { fill: #2e9e6a; }
+  .s4 { stroke: #b0398f; } .f4 { fill: #b0398f; }
+  .line { fill: none; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; }
+  .dash { stroke-dasharray: 6 5; }
+  .ref { stroke: #6b7280; stroke-width: 1.25; stroke-dasharray: 4 4; fill: none; }
+  .shade { fill: #d0453a; opacity: 0.08; }
+  .node { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+  .hidden { fill: #e9effb; }
+  .arrow { stroke: #1f2328; stroke-width: 1.5; fill: none; }
+  .ahead { fill: #1f2328; }
+  .plate { fill: none; stroke: #9ca3af; stroke-width: 1.25; stroke-dasharray: 6 4; }
+  .legend-bg { fill: #fdfdfc; opacity: 0.9; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #e6e6e3; }
+    .muted { fill: #9aa0a8; }
+    .axis { stroke: #6b7280; }
+    .grid { stroke: #2a2e34; }
+    .s1 { stroke: #7aa7ff; } .f1 { fill: #7aa7ff; }
+    .s2 { stroke: #f0a35e; } .f2 { fill: #f0a35e; }
+    .s3 { stroke: #5cc495; } .f3 { fill: #5cc495; }
+    .s4 { stroke: #e07cc4; } .f4 { fill: #e07cc4; }
+    .ref { stroke: #9aa0a8; }
+    .shade { fill: #ff6b5e; opacity: 0.1; }
+    .node { fill: #1d2025; stroke: #e6e6e3; }
+    .hidden { fill: #263450; }
+    .arrow { stroke: #e6e6e3; }
+    .ahead { fill: #e6e6e3; }
+    .legend-bg { fill: #16181c; }
+  }
+
+  .cell { fill: #ffffff; stroke: #9ca3af; stroke-width: 1.25; }
+  .cell-click { fill: #2f6fdb; stroke: #2f6fdb; stroke-width: 1.25; }
+  .cell-click-text { fill: #ffffff; font-weight: 600; }
+  .hm { fill: #2f6fdb; }
+  .hm-diag { fill: none; stroke: #1f2328; stroke-width: 1.5; }
+  .hm-strong { fill: #ffffff; }
+  .arc { fill: none; stroke-width: 1.75; }
+  @media (prefers-color-scheme: dark) {
+    .cell { fill: #1d2025; stroke: #6b7280; }
+    .cell-click { fill: #7aa7ff; stroke: #7aa7ff; }
+    .cell-click-text { fill: #16181c; }
+    .hm { fill: #7aa7ff; }
+    .hm-diag { stroke: #e6e6e3; }
+    .hm-strong { fill: #16181c; }
+  }
+</style>
+<text x="336.0" y="20.0" text-anchor="middle" class="muted">rank of the clicked link</text>
+<text x="92.0" y="236.0" text-anchor="middle" class="muted" transform="rotate(-90 92 236)">rank of the viewed abstract</text>
+<text x="181.0" y="40.0" text-anchor="middle" class="muted small">1</text>
+<text x="243.0" y="40.0" text-anchor="middle" class="muted small">2</text>
+<text x="305.0" y="40.0" text-anchor="middle" class="muted small">3</text>
+<text x="367.0" y="40.0" text-anchor="middle" class="muted small">4</text>
+<text x="429.0" y="40.0" text-anchor="middle" class="muted small">5</text>
+<text x="491.0" y="40.0" text-anchor="middle" class="muted small">6</text>
+<text x="140.0" y="85.0" text-anchor="end" class="muted small">1</text>
+<rect class="hm" x="151" y="51" width="60" height="60" rx="4" fill-opacity="0.82"/>
+<text x="181.0" y="85.0" text-anchor="middle" class="small hm-strong">91%</text>
+<rect class="hm" x="213" y="51" width="60" height="60" rx="4" fill-opacity="0.70"/>
+<text x="243.0" y="85.0" text-anchor="middle" class="small hm-strong">76%</text>
+<rect class="hm" x="275" y="51" width="60" height="60" rx="4" fill-opacity="0.68"/>
+<text x="305.0" y="85.0" text-anchor="middle" class="small hm-strong">74%</text>
+<rect class="hm" x="337" y="51" width="60" height="60" rx="4" fill-opacity="0.56"/>
+<text x="367.0" y="85.0" text-anchor="middle" class="small hm-strong">60%</text>
+<rect class="hm" x="399" y="51" width="60" height="60" rx="4" fill-opacity="0.52"/>
+<text x="429.0" y="85.0" text-anchor="middle" class="small">54%</text>
+<rect class="hm" x="461" y="51" width="60" height="60" rx="4" fill-opacity="0.44"/>
+<text x="491.0" y="85.0" text-anchor="middle" class="small">46%</text>
+<rect class="hm-diag" x="151" y="51" width="60" height="60" rx="4"/>
+<text x="140.0" y="147.0" text-anchor="end" class="muted small">2</text>
+<rect class="hm" x="151" y="113" width="60" height="60" rx="4" fill-opacity="0.54"/>
+<text x="181.0" y="147.0" text-anchor="middle" class="small hm-strong">57%</text>
+<rect class="hm" x="213" y="113" width="60" height="60" rx="4" fill-opacity="0.82"/>
+<text x="243.0" y="147.0" text-anchor="middle" class="small hm-strong">90%</text>
+<rect class="hm" x="275" y="113" width="60" height="60" rx="4" fill-opacity="0.75"/>
+<text x="305.0" y="147.0" text-anchor="middle" class="small hm-strong">83%</text>
+<rect class="hm" x="337" y="113" width="60" height="60" rx="4" fill-opacity="0.51"/>
+<text x="367.0" y="147.0" text-anchor="middle" class="small">53%</text>
+<rect class="hm" x="399" y="113" width="60" height="60" rx="4" fill-opacity="0.59"/>
+<text x="429.0" y="147.0" text-anchor="middle" class="small hm-strong">64%</text>
+<rect class="hm" x="461" y="113" width="60" height="60" rx="4" fill-opacity="0.52"/>
+<text x="491.0" y="147.0" text-anchor="middle" class="small">54%</text>
+<rect class="hm-diag" x="213" y="113" width="60" height="60" rx="4"/>
+<text x="140.0" y="209.0" text-anchor="end" class="muted small">3</text>
+<rect class="hm" x="151" y="175" width="60" height="60" rx="4" fill-opacity="0.31"/>
+<text x="181.0" y="209.0" text-anchor="middle" class="small">30%</text>
+<rect class="hm" x="213" y="175" width="60" height="60" rx="4" fill-opacity="0.46"/>
+<text x="243.0" y="209.0" text-anchor="middle" class="small">48%</text>
+<rect class="hm" x="275" y="175" width="60" height="60" rx="4" fill-opacity="0.86"/>
+<text x="305.0" y="209.0" text-anchor="middle" class="small hm-strong">96%</text>
+<rect class="hm" x="337" y="175" width="60" height="60" rx="4" fill-opacity="0.73"/>
+<text x="367.0" y="209.0" text-anchor="middle" class="small hm-strong">80%</text>
+<rect class="hm" x="399" y="175" width="60" height="60" rx="4" fill-opacity="0.75"/>
+<text x="429.0" y="209.0" text-anchor="middle" class="small hm-strong">82%</text>
+<rect class="hm" x="461" y="175" width="60" height="60" rx="4" fill-opacity="0.44"/>
+<text x="491.0" y="209.0" text-anchor="middle" class="small">46%</text>
+<rect class="hm-diag" x="275" y="175" width="60" height="60" rx="4"/>
+<text x="140.0" y="271.0" text-anchor="end" class="muted small">4</text>
+<rect class="hm" x="151" y="237" width="60" height="60" rx="4" fill-opacity="0.21"/>
+<text x="181.0" y="271.0" text-anchor="middle" class="small">17%</text>
+<rect class="hm" x="213" y="237" width="60" height="60" rx="4" fill-opacity="0.22"/>
+<text x="243.0" y="271.0" text-anchor="middle" class="small">19%</text>
+<rect class="hm" x="275" y="237" width="60" height="60" rx="4" fill-opacity="0.46"/>
+<text x="305.0" y="271.0" text-anchor="middle" class="small">48%</text>
+<rect class="hm" x="337" y="237" width="60" height="60" rx="4" fill-opacity="0.84"/>
+<text x="367.0" y="271.0" text-anchor="middle" class="small hm-strong">93%</text>
+<rect class="hm" x="399" y="237" width="60" height="60" rx="4" fill-opacity="0.59"/>
+<text x="429.0" y="271.0" text-anchor="middle" class="small hm-strong">64%</text>
+<rect class="hm" x="461" y="237" width="60" height="60" rx="4" fill-opacity="0.44"/>
+<text x="491.0" y="271.0" text-anchor="middle" class="small">46%</text>
+<rect class="hm-diag" x="337" y="237" width="60" height="60" rx="4"/>
+<text x="140.0" y="333.0" text-anchor="end" class="muted small">5</text>
+<rect class="hm" x="151" y="299" width="60" height="60" rx="4" fill-opacity="0.13"/>
+<text x="181.0" y="333.0" text-anchor="middle" class="small">9%</text>
+<rect class="hm" x="213" y="299" width="60" height="60" rx="4" fill-opacity="0.18"/>
+<text x="243.0" y="333.0" text-anchor="middle" class="small">14%</text>
+<rect class="hm" x="275" y="299" width="60" height="60" rx="4" fill-opacity="0.24"/>
+<text x="305.0" y="333.0" text-anchor="middle" class="small">22%</text>
+<rect class="hm" x="337" y="299" width="60" height="60" rx="4" fill-opacity="0.51"/>
+<text x="367.0" y="333.0" text-anchor="middle" class="small">53%</text>
+<rect class="hm" x="399" y="299" width="60" height="60" rx="4" fill-opacity="0.90"/>
+<text x="429.0" y="333.0" text-anchor="middle" class="small hm-strong">100%</text>
+<rect class="hm" x="461" y="299" width="60" height="60" rx="4" fill-opacity="0.67"/>
+<text x="491.0" y="333.0" text-anchor="middle" class="small hm-strong">73%</text>
+<rect class="hm-diag" x="399" y="299" width="60" height="60" rx="4"/>
+<text x="140.0" y="395.0" text-anchor="end" class="muted small">6</text>
+<rect class="hm" x="151" y="361" width="60" height="60" rx="4" fill-opacity="0.10"/>
+<text x="181.0" y="395.0" text-anchor="middle" class="small">4%</text>
+<rect class="hm" x="213" y="361" width="60" height="60" rx="4" fill-opacity="0.10"/>
+<text x="243.0" y="395.0" text-anchor="middle" class="small">5%</text>
+<rect class="hm" x="275" y="361" width="60" height="60" rx="4" fill-opacity="0.13"/>
+<text x="305.0" y="395.0" text-anchor="middle" class="small">9%</text>
+<rect class="hm" x="337" y="361" width="60" height="60" rx="4" fill-opacity="0.34"/>
+<text x="367.0" y="395.0" text-anchor="middle" class="small">33%</text>
+<rect class="hm" x="399" y="361" width="60" height="60" rx="4" fill-opacity="0.21"/>
+<text x="429.0" y="395.0" text-anchor="middle" class="small">18%</text>
+<rect class="hm" x="461" y="361" width="60" height="60" rx="4" fill-opacity="0.75"/>
+<text x="491.0" y="395.0" text-anchor="middle" class="small hm-strong">82%</text>
+<rect class="hm-diag" x="461" y="361" width="60" height="60" rx="4"/>
+<text x="546.0" y="70.0" text-anchor="start" class="small title">above the diagonal:</text>
+<text x="546.0" y="88.0" text-anchor="start" class="small">abstracts above a click</text>
+<text x="546.0" y="106.0" text-anchor="start" class="small">are mostly read</text>
+<text x="546.0" y="146.0" text-anchor="start" class="small title">just below the diagonal:</text>
+<text x="546.0" y="164.0" text-anchor="start" class="small">the next abstract is read</text>
+<text x="546.0" y="182.0" text-anchor="start" class="small">about half the time</text>
+<text x="546.0" y="222.0" text-anchor="start" class="small title">further below: rarely</text>
+</svg>
