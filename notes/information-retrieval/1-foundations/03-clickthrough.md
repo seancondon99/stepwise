@@ -12,11 +12,12 @@
 
 ## Clicks → pairwise preferences
 
-The main result: a click is not a reliable "this is relevant" label. A click **on a link the user scrolled past others to reach** is a reliable "this beats the ones I skipped". For a ranking $l_1, l_2, \dots$ with clicked ranks $C$:
+The main result: a click is not a reliable "this is relevant" label. But a click on a link the user **scrolled past others to reach** is a reliable "this beats the ones I skipped".
 
-$$
-\boxed{\;\rel(l_i) > \rel(l_j) \quad \forall\, j < i,\ \ i \in C,\ \ j \notin C\;}
-$$
+<figure>
+  <img src="figures/click-main.svg" alt="Clicks on l1, l3 and l5: l3 beats l2, l5 beats l2 and l4">
+  <figcaption>Clicked links in blue. Each arc goes from the preferred link to a link it beats.</figcaption>
+</figure>
 
 These preferences agree with human judges **~81–83%** of the time. Two human judges agree with each other **89.5%** of the time.
 
@@ -81,20 +82,13 @@ P(\text{click the more relevant link} \mid \text{it's at rank } 2) & = 2 / 7 || 
 
 ## Five strategies for extracting preferences
 
-Example: ranking $l_1^* \ l_2 \ l_3^* \ l_4 \ l_5^* \ l_6 \ l_7$, with clicks (*) on $l_1, l_3, l_5$ in that order.
-
-```derivation
-\rel(l_i) > \rel(l_j) & \quad \forall\, j < i,\ \ i \in C,\ \ j \notin C || 1 || [!INTUITION] skip above :: Only fires when the user **skipped** a higher link, i.e. overrode the engine's order, so trust bias can't produce it. It only compares docs from the same list, so it's relative to that list's quality. No preference for $l_1$: nothing was skipped to reach it, so that click could be pure trust.
-\rel(l_{i^*}) > \rel(l_j) & \quad i^* = \text{last click},\ \ \forall\, j < i^*,\ \ j \notin C || 2 || [!INTUITION] last click :: Earlier clicks are less informed: if the user came back and clicked again, the first page probably wasn't what they wanted. Use only the last click.
-\rel(l_i) > \rel(l_j) & \quad \forall\, i, j \in C,\ \ t(i) > t(j) || 3 || [!ASSUMPTION] earlier click :: Later clicks are on more relevant docs than earlier ones. Ignores non-clicked docs entirely. Not supported by the data (below).
-\rel(l_i) > \rel(l_{i-1}) & \quad \forall\, i \in C,\ \ i - 1 \notin C || 4 || [!INTUITION] skip previous :: The abstract right above a click is the one most reliably read (heatmap), so only compare with that one.
-\rel(l_i) > \rel(l_{i+1}) & \quad \forall\, i \in C,\ \ i + 1 \notin C || 5 || [!PROBLEM] no-click next :: Users read the abstract right below a click about half the time, so prefer the click over it. But every pair it produces **agrees with the engine's order**, so it scores well even for a user who clicks blindly (below).
-```
-
 <figure>
   <img src="figures/click-strategies.svg" alt="The five strategies applied to clicks on l1, l3 and l5, with arcs showing the extracted preferences">
-  <figcaption>Each arc goes from the preferred doc to the doc it beats. Strategies 1, 2 and 4 only produce "lower beats higher" pairs; strategy 5 only produces "higher beats lower".</figcaption>
+  <figcaption>Same clicks, five ways to read them. Arcs go from the preferred link to the link it beats. Why: green = intuition, pink = assumption, red = problem. Strategies 1, 2 and 4 only produce "lower beats higher" pairs; strategy 5 only produces "higher beats lower".</figcaption>
 </figure>
+
+> [!NOTE]
+> **Why no preference for l₁ in strategy 1?** Nothing was skipped to reach it, so that click could be pure trust in the ranking.
 
 ---
 

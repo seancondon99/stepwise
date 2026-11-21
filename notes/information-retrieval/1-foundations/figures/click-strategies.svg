@@ -53,101 +53,116 @@
     .hm-diag { stroke: #e6e6e3; }
     .hm-strong { fill: #16181c; }
   }
+
+  .k-int { fill: #23845a; } .k-ass { fill: #c02a8c; } .k-prob { fill: #c8372d; }
+  @media (prefers-color-scheme: dark) {
+    .k-int { fill: #5cc495; } .k-ass { fill: #ec7cc6; } .k-prob { fill: #ff7f74; }
+  }
 </style>
 <defs><marker id="pref" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="f2" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-<text x="368.0" y="18.0" text-anchor="middle" class="muted small">clicked: l₁, l₃, l₅  (in that order)</text>
-<text x="548.0" y="18.0" text-anchor="start" class="muted small">extracted preferences</text>
-<text x="10.0" y="85.0" text-anchor="start" class="small title">1  Click &gt; Skip Above</text>
-<rect class="cell-click" x="223.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="236.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₁</text>
-<rect class="cell" x="267.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="280.0" y="84.5" text-anchor="middle" class="small muted">l₂</text>
-<rect class="cell-click" x="311.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="324.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₃</text>
-<rect class="cell" x="355.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="368.0" y="84.5" text-anchor="middle" class="small muted">l₄</text>
-<rect class="cell-click" x="399.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="412.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₅</text>
-<rect class="cell" x="443.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="456.0" y="84.5" text-anchor="middle" class="small muted">l₆</text>
+<text x="420.0" y="18.0" text-anchor="middle" class="muted small">clicks on l₁, l₃, l₅  (in that order)</text>
+<text x="574.0" y="18.0" text-anchor="start" class="muted small">why</text>
+<text x="10.0" y="76.0" text-anchor="start" class="small title">1  Click &gt; Skip Above</text>
+<text x="10.0" y="93.0" text-anchor="start" class="small muted">click beats skipped links above it</text>
+<rect class="cell-click" x="287.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="300.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₁</text>
+<rect class="cell" x="327.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="340.0" y="84.5" text-anchor="middle" class="small muted">l₂</text>
+<rect class="cell-click" x="367.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="380.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₃</text>
+<rect class="cell" x="407.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="420.0" y="84.5" text-anchor="middle" class="small muted">l₄</text>
+<rect class="cell-click" x="447.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="460.0" y="84.5" text-anchor="middle" class="small cell-click-text">l₅</text>
 <rect class="cell" x="487.0" y="67.0" width="26" height="26" rx="5"/>
-<text x="500.0" y="84.5" text-anchor="middle" class="small muted">l₇</text>
-<path class="arc s2" d="M320,66.0 Q302.0,41.0 284,66.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,66.0 Q346.0,17.0 284,66.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,66.0 Q390.0,41.0 372,66.0" marker-end="url(#pref)"/>
-<text x="548.0" y="85.0" text-anchor="start" class="small">l₃ &gt; l₂,  l₅ &gt; l₂,  l₅ &gt; l₄</text>
-<text x="10.0" y="165.0" text-anchor="start" class="small title">2  Last Click &gt; Skip Above</text>
-<rect class="cell-click" x="223.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="236.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₁</text>
-<rect class="cell" x="267.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="280.0" y="164.5" text-anchor="middle" class="small muted">l₂</text>
-<rect class="cell-click" x="311.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="324.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₃</text>
-<rect class="cell" x="355.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="368.0" y="164.5" text-anchor="middle" class="small muted">l₄</text>
-<rect class="cell-click" x="399.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="412.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₅</text>
-<rect class="cell" x="443.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="456.0" y="164.5" text-anchor="middle" class="small muted">l₆</text>
+<text x="500.0" y="84.5" text-anchor="middle" class="small muted">l₆</text>
+<rect class="cell" x="527.0" y="67.0" width="26" height="26" rx="5"/>
+<text x="540.0" y="84.5" text-anchor="middle" class="small muted">l₇</text>
+<path class="arc s2" d="M376,66.0 Q360.0,41.0 344,66.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,66.0 Q400.0,17.0 344,66.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,66.0 Q440.0,41.0 424,66.0" marker-end="url(#pref)"/>
+<text x="574.0" y="76.0" text-anchor="start" class="small k-int">skipping a higher link =</text>
+<text x="574.0" y="93.0" text-anchor="start" class="small k-int">overriding the ranking</text>
+<text x="10.0" y="156.0" text-anchor="start" class="small title">2  Last Click &gt; Skip Above</text>
+<text x="10.0" y="173.0" text-anchor="start" class="small muted">same, but only the last click</text>
+<rect class="cell-click" x="287.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="300.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₁</text>
+<rect class="cell" x="327.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="340.0" y="164.5" text-anchor="middle" class="small muted">l₂</text>
+<rect class="cell-click" x="367.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="380.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₃</text>
+<rect class="cell" x="407.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="420.0" y="164.5" text-anchor="middle" class="small muted">l₄</text>
+<rect class="cell-click" x="447.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="460.0" y="164.5" text-anchor="middle" class="small cell-click-text">l₅</text>
 <rect class="cell" x="487.0" y="147.0" width="26" height="26" rx="5"/>
-<text x="500.0" y="164.5" text-anchor="middle" class="small muted">l₇</text>
-<path class="arc s2" d="M408,146.0 Q346.0,97.0 284,146.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,146.0 Q390.0,121.0 372,146.0" marker-end="url(#pref)"/>
-<text x="548.0" y="165.0" text-anchor="start" class="small">l₅ &gt; l₂,  l₅ &gt; l₄</text>
-<text x="10.0" y="245.0" text-anchor="start" class="small title">3  Click &gt; Earlier Click</text>
-<rect class="cell-click" x="223.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="236.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₁</text>
-<rect class="cell" x="267.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="280.0" y="244.5" text-anchor="middle" class="small muted">l₂</text>
-<rect class="cell-click" x="311.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="324.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₃</text>
-<rect class="cell" x="355.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="368.0" y="244.5" text-anchor="middle" class="small muted">l₄</text>
-<rect class="cell-click" x="399.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="412.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₅</text>
-<rect class="cell" x="443.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="456.0" y="244.5" text-anchor="middle" class="small muted">l₆</text>
+<text x="500.0" y="164.5" text-anchor="middle" class="small muted">l₆</text>
+<rect class="cell" x="527.0" y="147.0" width="26" height="26" rx="5"/>
+<text x="540.0" y="164.5" text-anchor="middle" class="small muted">l₇</text>
+<path class="arc s2" d="M456,146.0 Q400.0,97.0 344,146.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,146.0 Q440.0,121.0 424,146.0" marker-end="url(#pref)"/>
+<text x="574.0" y="156.0" text-anchor="start" class="small k-int">earlier clicks were</text>
+<text x="574.0" y="173.0" text-anchor="start" class="small k-int">less informed</text>
+<text x="10.0" y="236.0" text-anchor="start" class="small title">3  Click &gt; Earlier Click</text>
+<text x="10.0" y="253.0" text-anchor="start" class="small muted">later click beats earlier click</text>
+<rect class="cell-click" x="287.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="300.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₁</text>
+<rect class="cell" x="327.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="340.0" y="244.5" text-anchor="middle" class="small muted">l₂</text>
+<rect class="cell-click" x="367.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="380.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₃</text>
+<rect class="cell" x="407.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="420.0" y="244.5" text-anchor="middle" class="small muted">l₄</text>
+<rect class="cell-click" x="447.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="460.0" y="244.5" text-anchor="middle" class="small cell-click-text">l₅</text>
 <rect class="cell" x="487.0" y="227.0" width="26" height="26" rx="5"/>
-<text x="500.0" y="244.5" text-anchor="middle" class="small muted">l₇</text>
-<path class="arc s2" d="M320,226.0 Q280.0,189.0 240,226.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,226.0 Q324.0,165.0 240,226.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,226.0 Q368.0,189.0 328,226.0" marker-end="url(#pref)"/>
-<text x="548.0" y="245.0" text-anchor="start" class="small">l₃ &gt; l₁,  l₅ &gt; l₁,  l₅ &gt; l₃</text>
-<text x="10.0" y="325.0" text-anchor="start" class="small title">4  Click &gt; Skip Previous</text>
-<rect class="cell-click" x="223.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="236.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₁</text>
-<rect class="cell" x="267.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="280.0" y="324.5" text-anchor="middle" class="small muted">l₂</text>
-<rect class="cell-click" x="311.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="324.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₃</text>
-<rect class="cell" x="355.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="368.0" y="324.5" text-anchor="middle" class="small muted">l₄</text>
-<rect class="cell-click" x="399.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="412.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₅</text>
-<rect class="cell" x="443.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="456.0" y="324.5" text-anchor="middle" class="small muted">l₆</text>
+<text x="500.0" y="244.5" text-anchor="middle" class="small muted">l₆</text>
+<rect class="cell" x="527.0" y="227.0" width="26" height="26" rx="5"/>
+<text x="540.0" y="244.5" text-anchor="middle" class="small muted">l₇</text>
+<path class="arc s2" d="M376,226.0 Q340.0,189.0 304,226.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,226.0 Q380.0,165.0 304,226.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,226.0 Q420.0,189.0 384,226.0" marker-end="url(#pref)"/>
+<text x="574.0" y="236.0" text-anchor="start" class="small k-ass">assumes later clicks</text>
+<text x="574.0" y="253.0" text-anchor="start" class="small k-ass">are more relevant</text>
+<text x="10.0" y="316.0" text-anchor="start" class="small title">4  Click &gt; Skip Previous</text>
+<text x="10.0" y="333.0" text-anchor="start" class="small muted">click beats the skipped link just above</text>
+<rect class="cell-click" x="287.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="300.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₁</text>
+<rect class="cell" x="327.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="340.0" y="324.5" text-anchor="middle" class="small muted">l₂</text>
+<rect class="cell-click" x="367.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="380.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₃</text>
+<rect class="cell" x="407.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="420.0" y="324.5" text-anchor="middle" class="small muted">l₄</text>
+<rect class="cell-click" x="447.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="460.0" y="324.5" text-anchor="middle" class="small cell-click-text">l₅</text>
 <rect class="cell" x="487.0" y="307.0" width="26" height="26" rx="5"/>
-<text x="500.0" y="324.5" text-anchor="middle" class="small muted">l₇</text>
-<path class="arc s2" d="M320,306.0 Q302.0,281.0 284,306.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M408,306.0 Q390.0,281.0 372,306.0" marker-end="url(#pref)"/>
-<text x="548.0" y="325.0" text-anchor="start" class="small">l₃ &gt; l₂,  l₅ &gt; l₄</text>
-<text x="10.0" y="405.0" text-anchor="start" class="small title">5  Click &gt; No-Click Next</text>
-<rect class="cell-click" x="223.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="236.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₁</text>
-<rect class="cell" x="267.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="280.0" y="404.5" text-anchor="middle" class="small muted">l₂</text>
-<rect class="cell-click" x="311.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="324.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₃</text>
-<rect class="cell" x="355.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="368.0" y="404.5" text-anchor="middle" class="small muted">l₄</text>
-<rect class="cell-click" x="399.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="412.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₅</text>
-<rect class="cell" x="443.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="456.0" y="404.5" text-anchor="middle" class="small muted">l₆</text>
+<text x="500.0" y="324.5" text-anchor="middle" class="small muted">l₆</text>
+<rect class="cell" x="527.0" y="307.0" width="26" height="26" rx="5"/>
+<text x="540.0" y="324.5" text-anchor="middle" class="small muted">l₇</text>
+<path class="arc s2" d="M376,306.0 Q360.0,281.0 344,306.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M456,306.0 Q440.0,281.0 424,306.0" marker-end="url(#pref)"/>
+<text x="574.0" y="316.0" text-anchor="start" class="small k-int">the abstract right above</text>
+<text x="574.0" y="333.0" text-anchor="start" class="small k-int">a click is almost always read</text>
+<text x="10.0" y="396.0" text-anchor="start" class="small title">5  Click &gt; No-Click Next</text>
+<text x="10.0" y="413.0" text-anchor="start" class="small muted">click beats the unclicked link just below</text>
+<rect class="cell-click" x="287.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="300.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₁</text>
+<rect class="cell" x="327.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="340.0" y="404.5" text-anchor="middle" class="small muted">l₂</text>
+<rect class="cell-click" x="367.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="380.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₃</text>
+<rect class="cell" x="407.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="420.0" y="404.5" text-anchor="middle" class="small muted">l₄</text>
+<rect class="cell-click" x="447.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="460.0" y="404.5" text-anchor="middle" class="small cell-click-text">l₅</text>
 <rect class="cell" x="487.0" y="387.0" width="26" height="26" rx="5"/>
-<text x="500.0" y="404.5" text-anchor="middle" class="small muted">l₇</text>
-<path class="arc s2" d="M240,386.0 Q258.0,361.0 276,386.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M328,386.0 Q346.0,361.0 364,386.0" marker-end="url(#pref)"/>
-<path class="arc s2" d="M416,386.0 Q434.0,361.0 452,386.0" marker-end="url(#pref)"/>
-<text x="548.0" y="405.0" text-anchor="start" class="small">l₁ &gt; l₂,  l₃ &gt; l₄,  l₅ &gt; l₆</text>
+<text x="500.0" y="404.5" text-anchor="middle" class="small muted">l₆</text>
+<rect class="cell" x="527.0" y="387.0" width="26" height="26" rx="5"/>
+<text x="540.0" y="404.5" text-anchor="middle" class="small muted">l₇</text>
+<path class="arc s2" d="M304,386.0 Q320.0,361.0 336,386.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M384,386.0 Q400.0,361.0 416,386.0" marker-end="url(#pref)"/>
+<path class="arc s2" d="M464,386.0 Q480.0,361.0 496,386.0" marker-end="url(#pref)"/>
+<text x="574.0" y="396.0" text-anchor="start" class="small k-prob">always agrees with the</text>
+<text x="574.0" y="413.0" text-anchor="start" class="small k-prob">existing ranking</text>
 </svg>

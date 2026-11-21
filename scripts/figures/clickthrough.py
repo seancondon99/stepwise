@@ -62,43 +62,79 @@ def fig_viewed_before_click():
 
 
 # ---------------------------------------------------------------- the five strategies on l1* l2 l3* l4 l5* l6 l7
+CLICKS = {1, 3, 5}
+SUB = "₀₁₂₃₄₅₆₇₈₉"
+# (name, plain-English rule, preferences as (winner, loser), idea lines, idea kind)
+STRATEGIES = [
+    ("1  Click > Skip Above", "click beats skipped links above it", [(3, 2), (5, 2), (5, 4)],
+     ["skipping a higher link =", "overriding the ranking"], "k-int"),
+    ("2  Last Click > Skip Above", "same, but only the last click", [(5, 2), (5, 4)],
+     ["earlier clicks were", "less informed"], "k-int"),
+    ("3  Click > Earlier Click", "later click beats earlier click", [(3, 1), (5, 1), (5, 3)],
+     ["assumes later clicks", "are more relevant"], "k-ass"),
+    ("4  Click > Skip Previous", "click beats the skipped link just above", [(3, 2), (5, 4)],
+     ["the abstract right above", "a click is almost always read"], "k-int"),
+    ("5  Click > No-Click Next", "click beats the unclicked link just below", [(1, 2), (3, 4), (5, 6)],
+     ["always agrees with the", "existing ranking"], "k-prob"),
+]
+
+STRAT_STYLE = EXTRA + """
+  .k-int { fill: #23845a; } .k-ass { fill: #c02a8c; } .k-prob { fill: #c8372d; }
+  @media (prefers-color-scheme: dark) {
+    .k-int { fill: #5cc495; } .k-ass { fill: #ec7cc6; } .k-prob { fill: #ff7f74; }
+  }
+"""
+
+MARKER = ('<defs><marker id="pref" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">'
+          '<path class="f2" d="M0,0 L10,5 L0,10 z"/></marker></defs>')
+
+
+def ranking_row(x0, step, y, pairs, size=26):
+    b = []
+    for r in range(1, 8):
+        x = x0 + (r - 1) * step
+        cls = "cell-click" if r in CLICKS else "cell"
+        b.append(f'<rect class="{cls}" x="{x - size / 2}" y="{y - size / 2}" width="{size}" height="{size}" rx="5"/>')
+        b.append(text(x, y + 4.5, f"l{SUB[r]}", "small cell-click-text" if r in CLICKS else "small muted", "middle"))
+    for win, lose in pairs:
+        xa, xb = x0 + (win - 1) * step, x0 + (lose - 1) * step
+        h = 7 + 6 * abs(win - lose)
+        xa2 = xa + (-4 if xb < xa else 4)
+        xb2 = xb + (4 if xb < xa else -4)
+        b.append(f'<path class="arc s2" d="M{xa2},{y - size / 2 - 1} Q{(xa + xb) / 2},{y - size / 2 - 2 * h} {xb2},{y - size / 2 - 1}" marker-end="url(#pref)"/>')
+    return b
+
+
 def fig_strategies():
-    clicks = {1, 3, 5}
-    strategies = [
-        ("1  Click > Skip Above", [(3, 2), (5, 2), (5, 4)]),
-        ("2  Last Click > Skip Above", [(5, 2), (5, 4)]),
-        ("3  Click > Earlier Click", [(3, 1), (5, 1), (5, 3)]),
-        ("4  Click > Skip Previous", [(3, 2), (5, 4)]),
-        ("5  Click > No-Click Next", [(1, 2), (3, 4), (5, 6)]),
-    ]
-    x0, step, size, rowh, top = 236, 44, 26, 80, 80
-    sub = "₀₁₂₃₄₅₆₇₈₉"
-    b = ['<defs><marker id="pref" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">'
-         '<path class="f2" d="M0,0 L10,5 L0,10 z"/></marker></defs>']
-    b.append(text(x0 + 3 * step, 18, "clicked: l₁, l₃, l₅  (in that order)", "muted small", "middle"))
-    b.append(text(x0 + 7 * step + 4, 18, "extracted preferences", "muted small"))
-    for k, (name, pairs) in enumerate(strategies):
+    x0, step, rowh, top = 300, 40, 80, 80
+    ix = x0 + 6 * step + 34
+    b = [MARKER]
+    b.append(text(x0 + 3 * step, 18, "clicks on l₁, l₃, l₅  (in that order)", "muted small", "middle"))
+    b.append(text(ix, 18, "why", "muted small"))
+    for k, (name, rule, pairs, idea, kind) in enumerate(STRATEGIES):
         y = top + k * rowh
-        b.append(text(10, y + 5, name, "small title"))
-        for r in range(1, 8):
-            x = x0 + (r - 1) * step
-            cls = "cell-click" if r in clicks else "cell"
-            b.append(f'<rect class="{cls}" x="{x - size / 2}" y="{y - size / 2}" width="{size}" height="{size}" rx="5"/>')
-            b.append(text(x, y + 4.5, f"l{sub[r]}", "small cell-click-text" if r in clicks else "small muted", "middle"))
-        for win, lose in pairs:
-            xa, xb = x0 + (win - 1) * step, x0 + (lose - 1) * step
-            h = 7 + 6 * abs(win - lose)
-            xa2 = xa + (-4 if xb < xa else 4)
-            xb2 = xb + (4 if xb < xa else -4)
-            b.append(f'<path class="arc s2" d="M{xa2},{y - size / 2 - 1} Q{(xa + xb) / 2},{y - size / 2 - 2 * h} {xb2},{y - size / 2 - 1}" marker-end="url(#pref)"/>')
-        label = ",  ".join(f"l{sub[w]} > l{sub[l]}" for w, l in pairs)
-        b.append(text(x0 + 7 * step + 4, y + 5, label, "small"))
+        b.append(text(10, y - 4, name, "small title"))
+        b.append(text(10, y + 13, rule, "small muted"))
+        b += ranking_row(x0, step, y, pairs)
+        b.append(text(ix, y - 4, idea[0], f"small {kind}"))
+        b.append(text(ix, y + 13, idea[1], f"small {kind}"))
     return svg(760, top + 4 * rowh + 30, "\n".join(b),
-               "Preferences each of the five strategies extracts from clicks on l1, l3 and l5: arcs go from the preferred doc to the doc it beats", EXTRA)
+               "Preferences each of the five strategies extracts from clicks on l1, l3 and l5: arcs go from the preferred doc to the doc it beats", STRAT_STYLE)
+
+
+def fig_main():
+    x0, step = 60, 44
+    b = [MARKER] + ranking_row(x0, step, 64, STRATEGIES[0][2])
+    tx = x0 + 6 * step + 40
+    b.append(text(tx, 52, "a click beats every link the user", "title"))
+    b.append(text(tx, 72, "skipped over above it", "title"))
+    b.append(text(tx, 96, "l₃ > l₂,  l₅ > l₂,  l₅ > l₄", "muted small"))
+    return svg(600, 104, "\n".join(b), "Click beats skip above: clicks on l1, l3, l5 give l3 over l2, l5 over l2, l5 over l4", STRAT_STYLE)
 
 
 if __name__ == "__main__":
     write_all(OUT, [
         ("click-viewed-before.svg", fig_viewed_before_click),
         ("click-strategies.svg", fig_strategies),
+        ("click-main.svg", fig_main),
     ])
